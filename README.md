@@ -42,6 +42,12 @@ Na imagem abaixo destaquei cada componente que você criará e abaixo da imagem 
 
 **Comment (Azul):** Responsável por exibir um comentário. Os dados do comentário virão por uma propriedade do componente; 
 
+### Funcionalidades
+
+- Likes: Ao clicar no botão "Like" é adicionado ou retirado um Like do contador;
+
+- Comentários: Os comentários não ficam mais visíveis, somente quando se clica no botão comentários;
+
 ## :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
