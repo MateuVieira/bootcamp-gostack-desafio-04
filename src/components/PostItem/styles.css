@@ -75,6 +75,11 @@ img.post-options-comment, img.post-options-share {
   margin-right: 10px;
 }
 
+div.post-options img.post-options-liked {
+  width: 30px;
+  margin-right: 10px;
+}
+
 div.post-options span {
   margin-top: 4px;
 }
@@ -105,4 +110,9 @@ div.item-info-likes span {
 
 div.item-info-comments span {
   margin-right: 10px;
+}
+
+
+span.liked {
+  color: #1c55d1;
 }

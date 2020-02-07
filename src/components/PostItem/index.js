@@ -2,6 +2,7 @@ import React from 'react';
 
 import './styles.css';
 import like from '../../assets/like.svg';
+import liked from '../../assets/liked.svg';
 import comment from '../../assets/comment.svg';
 import share from '../../assets/share.svg';
 import likeFacebook from '../../assets/facebook-like.png';
@@ -32,10 +33,16 @@ function PostItem({ post, handlePostComment, handleClikeLike }) {
       </div>
       <div className="post-div" ></div>
       <div className="post-options" >
-        <div className="post-options-buttom" onClick={handleClikeLike} >
-          <img className="post-options-like" src={like} />
-          <span>Curtir</span>
-        </div>
+        {post.likeState ?
+          <div className="post-options-buttom" onClick={handleClikeLike} >
+            <img className="post-options-liked " src={liked} />
+            <span className="liked" >Curtir</span>
+          </div>
+          :
+          <div className="post-options-buttom" onClick={handleClikeLike} >
+            <img className="post-options-like" src={like} />
+            <span>Curtir</span>
+          </div>}
         <div className="post-options-buttom" onClick={handlePostComment}>
           <img className="post-options-comment" src={comment} />
           <span>Comentario</span>
