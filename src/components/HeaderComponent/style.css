@@ -1,0 +1,13 @@
+header {
+  background: #4A90E2;
+  min-height: 64px;
+  display: flex !important;
+  align-items: center;
+  justify-content: left;
+}
+
+header img {
+  width: 121px;
+  height: 24px;
+  margin-left: 42px;
+}
