@@ -76,3 +76,30 @@ img.post-options-comment, img.post-options-share {
 div.post-options span {
   margin-top: 4px;
 }
+
+div.post-list-item-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.item-info-likes {
+  display: flex;
+  align-items: center;
+  min-height:  50px;
+}
+
+
+div.item-info-likes img {
+  width: 25px;
+}
+
+div.item-info-likes span {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+div.item-info-comments span {
+  margin-right: 10px;
+}

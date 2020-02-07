@@ -16,7 +16,7 @@ class Timeline extends Component {
         },
         date: "04 Jun 2019",
         content: "Pessoal, alguém sabe se a Rocketseat está contratando?",
-        likes: { like: 0 },
+        likes:  0 ,
         commentState: false,
         comments: [
           {
@@ -37,7 +37,7 @@ class Timeline extends Component {
         },
         date: "14 Jun 2019",
         content: "Duis condimentum aliquet ipsum quis egestas. Integer pellentesque leo in dolor ultricies, quis suscipit lectus tincidunt. Vivamus turpis massa, sagittis ut tempor nec, mattis in ipsum.",
-        likes: { like: 0 },
+        likes:  0 ,
         commentState: false,
         comments: [
           {

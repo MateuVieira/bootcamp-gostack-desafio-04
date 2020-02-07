@@ -4,13 +4,11 @@ import './styles.css';
 import like from '../../assets/like.svg';
 import comment from '../../assets/comment.svg';
 import share from '../../assets/share.svg';
+import likeFacebook from '../../assets/facebook-like.png';
 
 import PostItemComment from '../PostItemComment';
 
 function PostItem({ post, handlePostComment }) {
-
-
-
 
   return (
     <li className="post-list-item" >
@@ -22,13 +20,24 @@ function PostItem({ post, handlePostComment }) {
         </div>
       </div>
       <p className="post-list-item-content" >{post.content}</p>
+      <div className="post-list-item-info" >
+        <div className="item-info-likes" >
+          <img src={likeFacebook} />
+          <span>{post.likes}</span>
+        </div>
+        <div className="item-info-comments">
+          {console.log(post.comments.length)}
+          <span>{post.comments.length}</span>
+          <strong>comentários</strong>
+        </div>
+      </div>
       <div className="post-div" ></div>
       <div className="post-options" >
         <div className="post-options-buttom">
           <img className="post-options-like" src={like} />
           <span>Curtir</span>
         </div>
-        <div className="post-options-buttom"  onClick={handlePostComment}>
+        <div className="post-options-buttom" onClick={handlePostComment}>
           <img className="post-options-comment" src={comment} />
           <span>Comentario</span>
         </div>
