@@ -1,0 +1,27 @@
+
+
+li.comment-item {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+
+li.comment-item img {
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 50%;
+}
+
+li.comment-item div.comment-item-content {
+  background-color: #F2F2F2;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  text-align: justify;
+  padding: 15px;
+}
+
+div.comment-item-content strong {
+  font-weight: bold;
+}
+

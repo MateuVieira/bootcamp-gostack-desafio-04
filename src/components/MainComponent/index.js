@@ -16,6 +16,8 @@ class Timeline extends Component {
         },
         date: "04 Jun 2019",
         content: "Pessoal, alguém sabe se a Rocketseat está contratando?",
+        likes: { like: 0 },
+        commentState: false,
         comments: [
           {
             id: 1,
@@ -35,6 +37,8 @@ class Timeline extends Component {
         },
         date: "14 Jun 2019",
         content: "Duis condimentum aliquet ipsum quis egestas. Integer pellentesque leo in dolor ultricies, quis suscipit lectus tincidunt. Vivamus turpis massa, sagittis ut tempor nec, mattis in ipsum.",
+        likes: { like: 0 },
+        commentState: false,
         comments: [
           {
             id: 1,
@@ -57,11 +61,30 @@ class Timeline extends Component {
     ]
   };
 
+  changeCommentState = (post, id) => {
+    if( post.id === id) {
+      post.commentState = !post.commentState;
+    }
+
+    return post;
+  }
+
+  handlePostComment = (id) => {
+    this.setState({ posts: this.state.posts
+      .map(post => post)
+      .filter(post =>  this.changeCommentState(post, id)) });
+  }
 
   render() {
     return (
       <ul className="post-list" >
-       {this.state.posts.map(post => <PostItem key={post.id} post={post}/>)}
+        {this.state.posts.map(post =>
+          <PostItem
+            key={post.id}
+            post={post}
+            handlePostComment={() => this.handlePostComment(post.id)}
+          />)
+        }
       </ul>
     );
   }
