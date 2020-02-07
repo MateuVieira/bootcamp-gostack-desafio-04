@@ -8,7 +8,7 @@ import likeFacebook from '../../assets/facebook-like.png';
 
 import PostItemComment from '../PostItemComment';
 
-function PostItem({ post, handlePostComment }) {
+function PostItem({ post, handlePostComment, handleClikeLike }) {
 
   return (
     <li className="post-list-item" >
@@ -26,14 +26,13 @@ function PostItem({ post, handlePostComment }) {
           <span>{post.likes}</span>
         </div>
         <div className="item-info-comments">
-          {console.log(post.comments.length)}
           <span>{post.comments.length}</span>
           <strong>comentários</strong>
         </div>
       </div>
       <div className="post-div" ></div>
       <div className="post-options" >
-        <div className="post-options-buttom">
+        <div className="post-options-buttom" onClick={handleClikeLike} >
           <img className="post-options-like" src={like} />
           <span>Curtir</span>
         </div>

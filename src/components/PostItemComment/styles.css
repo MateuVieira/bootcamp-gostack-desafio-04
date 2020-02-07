@@ -4,6 +4,7 @@ li.comment-item {
   display: flex;
   flex-direction: row;
   margin-top: 30px;
+  padding: 5px 20px;
 }
 
 li.comment-item img {

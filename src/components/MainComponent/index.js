@@ -16,7 +16,8 @@ class Timeline extends Component {
         },
         date: "04 Jun 2019",
         content: "Pessoal, alguém sabe se a Rocketseat está contratando?",
-        likes:  0 ,
+        likes: 50,
+        likeState: false,
         commentState: false,
         comments: [
           {
@@ -37,7 +38,8 @@ class Timeline extends Component {
         },
         date: "14 Jun 2019",
         content: "Duis condimentum aliquet ipsum quis egestas. Integer pellentesque leo in dolor ultricies, quis suscipit lectus tincidunt. Vivamus turpis massa, sagittis ut tempor nec, mattis in ipsum.",
-        likes:  0 ,
+        likes: 0,
+        likeState: false,
         commentState: false,
         comments: [
           {
@@ -62,17 +64,40 @@ class Timeline extends Component {
   };
 
   changeCommentState = (post, id) => {
-    if( post.id === id) {
+    if (post.id === id) {
       post.commentState = !post.commentState;
     }
 
     return post;
   }
 
+  changeLikeCount = (post, id) => {
+    if (post.id === id) {
+      if (post.likeState) {
+        post.likes = post.likes - 1;
+      } else {
+        post.likes = post.likes + 1;
+      }
+      post.likeState = !post.likeState;
+    }
+
+    return post;
+  }
+
   handlePostComment = (id) => {
-    this.setState({ posts: this.state.posts
-      .map(post => post)
-      .filter(post =>  this.changeCommentState(post, id)) });
+    this.setState({
+      posts: this.state.posts
+        .map(post => post)
+        .filter(post => this.changeCommentState(post, id))
+    });
+  }
+
+  handleClikeLike = (id) => {
+    this.setState({
+      posts: this.state.posts
+        .map(post => post)
+        .filter(post => this.changeLikeCount(post, id))
+    });
   }
 
   render() {
@@ -83,6 +108,7 @@ class Timeline extends Component {
             key={post.id}
             post={post}
             handlePostComment={() => this.handlePostComment(post.id)}
+            handleClikeLike={() => this.handleClikeLike(post.id)}
           />)
         }
       </ul>
