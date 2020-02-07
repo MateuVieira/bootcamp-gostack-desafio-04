@@ -18,8 +18,6 @@ As informações contidas na interface são **estáticas** e não refletem nenhu
 
 ### Tela da aplicação
 
-![Facebook](.github/facebook.png)
-
 O layout não precisa ficar exatamente igual, você pode utilizar sua criatividade para modificar da maneira que preferir.
 
 O mais importante é que todos elementos apareçam em tela.
