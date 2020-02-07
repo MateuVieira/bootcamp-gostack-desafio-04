@@ -8,8 +8,7 @@ li.post-list-item {
   margin: 20px auto;
   background: #ffffff;
   padding: 20px;
-  -webkit-box-shadow: 5px 4px 8px -3px rgba(0,0,0,0.79); 
-box-shadow: 5px 4px 8px -3px rgba(0,0,0,0.79);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 li.post-list-item div.head-post {
